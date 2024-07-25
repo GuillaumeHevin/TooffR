@@ -1,9 +1,7 @@
 
 #' Convert date string to POSIXct
 #' @description
-#' Easy to use string date to POSIXct convertor, with string dates in format %Y-%m-%d or %Y-%m-%d %H:%M:%S.
-#' Any other format will result return NA
-#' Timezone set for the conversion is 'GMT'
+#' Easy to use string date to POSIXct convertor, with string dates in format %Y-%m-%d or %Y-%m-%d %H:%M:%S. Any other format will result return NA. Timezone set for the conversion is 'GMT'
 #' 
 #' @usage text_toDate(date)
 #' 
