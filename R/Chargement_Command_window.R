@@ -28,6 +28,7 @@
 #' @param text Text to add before the progress bar (default = '')
 #' @param minimal if FALSE, a progress bar will appear, if TRUE only the percentage is shown
 #' 
+#' @export
 #' @examples
 #'  
 #' #simple loop
