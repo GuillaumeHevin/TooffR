@@ -1,0 +1,19 @@
+Package: TooffR_Package
+Version: 0.0.1
+Date: 2024-07-25
+Title: TooffR_Package
+Description: R package with all my used functions
+Authors@R: c(
+    person(given = "Guillaume",
+           family = "Hévin",
+           role = c("cre", "aut"),
+           email = "guillaume.hevin@protonmail.com")
+    )
+Encoding: UTF-8
+License: GPL-3 + file LICENSE
+Imports:
+    roxygen2,
+    remotes,
+    devtools,
+    stringr
+RoxygenNote: 7.3.1
