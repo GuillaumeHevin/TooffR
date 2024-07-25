@@ -22,18 +22,19 @@ Progress bar easy to use to check progress of loops
 Chargement_Command_window(100)
 for(i in 1:100)
  {
-   Chargement_Command_window()
    Sys.sleep(0.15)
+   Chargement_Command_window()
  }
 
-#Use in double loops without progress bar with a descriptive text
+
+#Use in double loops without progress bar (just percentage) with a descriptive text
 Chargement_Command_window(6*7, text = 'Waiting...', minimal = T)
 for (j in 1:6)
 {
  for(i in 1:7)
  {
-   Chargement_Command_window()
    Sys.sleep(0.15)
+   Chargement_Command_window()
  }
 }
 }
