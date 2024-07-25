@@ -10,7 +10,7 @@ sec2time(secondes)
 \item{secondes}{number of seconds to convert}
 }
 \value{
-character in format "days hours minuts secondes
+character in format "days hours minuts secondes"
 }
 \description{
 Convert a number of seconds in the format "days, hours min sec" to be easly readable by humain
@@ -20,5 +20,5 @@ sec2time(361)
   [1] "6m 1s"
 
 sec2time(c(18956, 900163, 23, 637))
-  [1] "5h 15m 56s"         "10 days, 10h 2m 43s" "23s"                 "10m 37s"  
+  [1] "5h 15m 56s"   "10 days, 10h 2m 43s"   "23s"   "10m 37s"  
 }

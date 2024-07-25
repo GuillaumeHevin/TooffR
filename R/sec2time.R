@@ -26,7 +26,7 @@
 #' 
 #' @param secondes number of seconds to convert
 #'
-#' @return character in format "days hours minuts secondes
+#' @return character in format "days hours minuts secondes"
 #' @export
 #'
 #' @examples
@@ -34,7 +34,7 @@
 #'   [1] "6m 1s"
 #' 
 #' sec2time(c(18956, 900163, 23, 637))
-#'   [1] "5h 15m 56s"         "10 days, 10h 2m 43s" "23s"                 "10m 37s"  
+#'   [1] "5h 15m 56s"   "10 days, 10h 2m 43s"   "23s"   "10m 37s"  
 sec2time <- function(secondes) {
   
   
