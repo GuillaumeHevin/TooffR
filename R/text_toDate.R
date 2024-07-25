@@ -1,5 +1,5 @@
 
-#' @title Convert date string to POSIXct
+#' Convert date string to POSIXct
 #' @description
 #' Easy to use string date to POSIXct convertor, with string dates in format %Y-%m-%d or %Y-%m-%d %H:%M:%S.
 #' Any other format will result return NA
@@ -18,7 +18,6 @@
 #' 
 #' text_toDate(c('2012-12-26 12:00:00','1995-01-16 20:00:00'))
 #'   [1] "2012-12-26 12:00:00 GMT" "1995-01-16 20:00:00 GMT"
-#'   
 text_toDate <- function(date) {
   
   #find if there is any hours in text
