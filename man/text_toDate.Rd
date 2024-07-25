@@ -7,13 +7,15 @@
 text_toDate(date)
 }
 \arguments{
-\item{date}{date to convert as a string, with format %Y-%m-%d or %Y-%m-%d %H:%M:%S}
+\item{date}{date to convert as a string, with format Y-m-d or Y-m-d H:M:S}
 }
 \value{
 date as POSIXct
 }
 \description{
-Easy to use string date to POSIXct convertor, with string dates in format %Y-%m-%d or %Y-%m-%d %H:%M:%S. Any other format will result return NA. Timezone set for the conversion is 'GMT'
+Easy to use string date to POSIXct convertor, with string dates in format Y-m-d or Y-m-d H:M:S.
+Any other format will result return NA.
+Timezone set for the conversion is 'GMT'
 }
 \examples{
 date_POSIXct <- text_toDate('2012-12-26')
