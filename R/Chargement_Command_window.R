@@ -27,6 +27,7 @@
 #' @param size Number of total elements in the loop
 #' @param text Text to add before the progress bar (default = '')
 #' @param minimal if FALSE, a progress bar will appear, if TRUE only the percentage is shown
+#' @export
 #' 
 #' @examples
 #'  
@@ -37,7 +38,6 @@
 #'    Chargement_Command_window()
 #'    Sys.sleep(0.15)
 #'  }
-#' 
 #' 
 #' #Use in double loops without progress bar with a descriptive text
 #' Chargement_Command_window(6*7, text = 'Waiting...', minimal = T)

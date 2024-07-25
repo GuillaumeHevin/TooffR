@@ -26,7 +26,6 @@ for(i in 1:100)
    Sys.sleep(0.15)
  }
 
-
 #Use in double loops without progress bar with a descriptive text
 Chargement_Command_window(6*7, text = 'Waiting...', minimal = T)
 for (j in 1:6)
