@@ -4,19 +4,80 @@
 \alias{nc_read_time}
 \title{Read time variable in a netCDF File}
 \usage{
-nc_read_time(filename)
+nc_read_time(nc_file)
 }
 \arguments{
-\item{netcdf_file}{Path to the netCDF file}
+\item{netcdf_file}{object created by [ncdf4::nc_open()]}
 }
 \value{
 vector with all dates in POSIXc format
 }
 \description{
-Will read the "time" variable in a netcdf file, and transform in a POSIXc vector using the units of the time variable
+Will read the "time" variable in a netcdf file, and transform in a POSIXc vector using the units attribute of the time variable.\cr
+}
+\details{
+The units attribute must be in the following format: ":TIME: since :DATE:".\cr
+:TIME: can have the following values:
+ - days    -> :DATE: format by default is %Y-%m-%d
+ - hours   -> :DATE: format by default is %Y-%m-%d %H:%M:%S
+ - seconds -> :DATE: format by default is %Y-%m-%d %H:%M:%S
+
+If the attribute "date_format" exist, it will be use for :DATE: format.
 }
 \examples{
 
-time <- nc_read_time("path\to\netCDFfile")
+#Exemple with no "date_format" attributes
+file <- "path\to\netCDFfile"
+nc_file <- nc_open(file)
 
+nc_file
+#>      1 variables (excluding dimension variables):
+#>        double Bm[time,gid]   (Chunking: [4018,100])  
+#>        units: m
+#>        
+#>      2 dimensions:
+#>        time  Size:4018 
+#>          units: days since 2010-08-01
+#>          long_name: time
+#>        gid  Size:33612 
+#>          units: Segments_ID
+#>          long_name: gid
+
+time <- nc_read_time(nc_file)
+time
+#>    [1] "2010-08-01 GMT" "2010-08-02 GMT" "2010-08-03 GMT" "2010-08-04 GMT"
+#>    [5] "2010-08-05 GMT" "2010-08-06 GMT" "2010-08-07 GMT" "2010-08-08 GMT"
+#>    [9] "2010-08-09 GMT" "2010-08-10 GMT" "2010-08-11 GMT" "2010-08-12 GMT"
+#>    ...
+
+
+#Exemple with "date_format" attributes
+file <- "path\to\netCDFfile"
+nc_file <- nc_open(file)
+
+nc_file
+#>      1 variables (excluding dimension variables):
+#>        float data[time,gid]   (Contiguous storage)  
+#>        variable_name: Tw_NFS
+#>          units: celsius_degrees
+#>          long_name: water temperature at the final node
+#>      
+#>      2 dimensions:
+#>        gid  Size:1 
+#>          units: segments_IDs
+#>        time  Size:96432 
+#>          units: hours since 01/08/2010 00:00:00
+#>          date_format: \%d/\%m/\%Y \%H:\%M:\%S
+       
+       
+time <- nc_read_time(nc_file)
+
+time
+#>    [1] "2010-08-01 00:00:00 GMT" "2010-08-01 01:00:00 GMT"
+#>    [3] "2010-08-01 02:00:00 GMT" "2010-08-01 03:00:00 GMT"
+#>    [5] "2010-08-01 04:00:00 GMT" "2010-08-01 05:00:00 GMT"
+#>    ...
+}
+\seealso{
+[ncdf4::nc_open()]
 }
