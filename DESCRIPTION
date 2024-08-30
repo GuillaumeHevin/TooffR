@@ -1,7 +1,7 @@
-Package: TooffR.Package
+Package: TooffR
 Version: 0.0.1
 Date: 2024-07-25
-Title: TooffR.Package
+Title: TooffR
 Description: R package with all my used functions
 Authors@R: c(
     person(given = "Guillaume",
