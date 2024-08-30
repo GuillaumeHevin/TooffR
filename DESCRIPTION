@@ -12,7 +12,7 @@ Authors@R: c(
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 License: GPL-3 + file LICENSE
-Imports:
+Depends:
     roxygen2,
     remotes,
     devtools,
