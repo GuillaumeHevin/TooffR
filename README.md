@@ -1,4 +1,4 @@
-# TooffR_Package [<img src="AE_hex_000000.png" align="right" width=160 height=160 alt=""/>](https://www.inrae.fr/en)
+# TooffR [<img src="AE_hex_000000.png" align="right" width=160 height=160 alt=""/>](https://www.inrae.fr/en)
 
 <!-- badges: start -->
 [![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)](<Redirect-URL>)
@@ -14,7 +14,7 @@ This project was carried out for National Research Institute for Agriculture, Fo
 ## Installation
 For latest development version
 ``` r
-remotes::install_github('GuillaumeHevin/TooffR_package')
+remotes::install_github('GuillaumeHevin/TooffR')
 ```
 
 
