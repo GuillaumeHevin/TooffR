@@ -29,6 +29,7 @@
 #' @param netcdf_file object created by [ncdf4::nc_open()]
 #'
 #' @return vector with all dates in POSIXc format
+#' @export
 #' 
 #' @details
 #' The units attribute must be in the following format: ":TIME: since :DATE:".\cr
