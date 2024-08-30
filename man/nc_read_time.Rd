@@ -7,7 +7,7 @@
 nc_read_time(nc_file)
 }
 \arguments{
-\item{netcdf_file}{object created by [ncdf4::nc_open()]}
+\item{netcdf_file}{object created by \code{\link[ncdf4:nc_open]{ncdf4::nc_open()}}}
 }
 \value{
 vector with all dates in POSIXc format
@@ -18,9 +18,11 @@ Will read the "time" variable in a netcdf file, and transform in a POSIXc vector
 \details{
 The units attribute must be in the following format: ":TIME: since :DATE:".\cr
 :TIME: can have the following values:
- - days    -> :DATE: format by default is %Y-%m-%d
- - hours   -> :DATE: format by default is %Y-%m-%d %H:%M:%S
- - seconds -> :DATE: format by default is %Y-%m-%d %H:%M:%S
+\itemize{
+\item days    -> :DATE: format by default is \%Y-\%m-\%d
+\item hours   -> :DATE: format by default is \%Y-\%m-\%d \%H:\%M:\%S
+\item seconds -> :DATE: format by default is \%Y-\%m-\%d \%H:\%M:\%S
+}
 
 If the attribute "date_format" exist, it will be use for :DATE: format.
 }
@@ -79,5 +81,5 @@ time
 #>    ...
 }
 \seealso{
-[ncdf4::nc_open()]
+\code{\link[ncdf4:nc_open]{ncdf4::nc_open()}}
 }
